@@ -23,10 +23,14 @@ class BaseModel:
         """
         if kwargs:
             for key, value in kwargs.items():
-                if hasattr(self, "created_at") and type(self.created_at) is str:
-                    self.created_at = datetime.strptime(kwargs["created_at"], fmt)
-                if hasattr(self, "updated_at") and type(self.updated_at) is str:
-                    self.updated_at = datetime.strptime(kwargs["updated_at"], fmt)
+                if (hasattr(self, "created_at") and
+                   type(self.created_at) is str):
+                    self.created_at = datetime.strptime
+                    (kwargs["created_at"], fmt)
+                if (hasattr(self, "updated_at") and
+                   type(self.updated_at) is str):
+                    self.updated_at = datetime.strptime
+                    (kwargs["updated_at"], fmt)
                 if key != "__class__":
                     setattr(self, key, value)
         else:
