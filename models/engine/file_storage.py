@@ -56,8 +56,17 @@ class FileStorage:
         """
         try:
             with open(self.__file_path, "r") as f:
-                jl = json.load()
+                jl = json.load(f)
             for key in jl:
                 self.__objects[key] = classes[jl[key]["__class__"]](**jl[key])
         except FileNotFoundError:
             pass
+
+    def serialize_user(self, user):
+        return json.dumps(user.__dict__)
+
+    def deserialize_user(self, json_data):
+        user_data = json.loads(json_data)
+        user = User()
+        user.__dict__.update(user_data)
+        return user
