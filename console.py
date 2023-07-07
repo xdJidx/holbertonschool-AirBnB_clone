@@ -7,6 +7,7 @@ Consol of AirBnB clone
 import cmd
 import sys
 from datetime import datetime
+from models.base_model import BaseModel
 import models
 
 class HBNBCommand(cmd.Cmd):
@@ -78,16 +79,16 @@ class HBNBCommand(cmd.Cmd):
                 print("** class doesn't exist **")
 
     def do_all(self, arg):
-            """Print all string representations of instances."""
-            objects = models.storage.all()
-            if not arg:
-                print([str(obj) for obj in objects.values()])
+        """Print all string representations of instances."""
+        objects = models.storage.all()
+        if not arg:
+            print([str(obj) for obj in objects.values()])
+        else:
+            class_name = arg
+            if class_name in models.__dict__ or class_name == "BaseModel":
+                print([str(obj) for obj in objects.values() if type(obj).__name__ == class_name])
             else:
-                try:
-                    class_name = arg
-                    print([str(obj) for obj in objects.values() if type(obj).__name__ == class_name])
-                except NameError:
-                    print("** class doesn't exist **")
+                print("** class doesn't exist **")
 
     def do_update(self, arg):
             """Update an instance based on the class name and id."""
