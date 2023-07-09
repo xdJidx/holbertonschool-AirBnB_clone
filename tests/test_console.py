@@ -33,3 +33,4 @@ class TestBaseDocs(unittest.TestCase):
     def test_class_docstr(self):
         """ Tests for docstring"""
         self.assertTrue(len(console.__doc__) >= 1)
+        

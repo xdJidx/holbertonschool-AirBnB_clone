@@ -107,3 +107,4 @@ class TestBaseModel(unittest.TestCase):
         time2 = self.temp_b.updated_at
         self.assertNotEqual(time1, time2)
         self.assertEqual(type(time1), datetime.datetime)
+        

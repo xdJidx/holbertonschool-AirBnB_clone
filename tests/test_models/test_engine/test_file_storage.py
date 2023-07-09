@@ -96,3 +96,4 @@ class TestFileStorage(unittest.TestCase):
         self.storage.new(instance)
         test_dict[instance_key] = instance
         self.assertEqual(test_dict, self.storage._FileStorage__objects)
+        
