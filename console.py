@@ -6,7 +6,6 @@ Consol of AirBnB clone
 
 import cmd
 import sys
-import shlex
 import models
 from datetime import datetime
 from models.base_model import BaseModel
@@ -20,11 +19,6 @@ from models import storage
 
 class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb) '
-    listProjects = ["BaseModel", "Amenity", "City", "Place", "Review",
-                    "State", "User"]
-    intAttrs = ["number_rooms", "number_bathrooms", "max_guest",
-                "price_by_night"]
-    floatAttrs = ["latitude", "longitude"]
 
     def do_quit(self, arg):
         """
@@ -39,19 +33,20 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def emptyline(self):
-        """
-        Do nothing when an empty line is entered
-        """
+        """Do nothing when an empty line is entered"""
         pass
 
     def do_create(self, arg):
             """Create a new instance of BaseModel, save it, and print its id."""
-            lineArgs = shlex.split(arg)
-            if not self.verifyClassProjects(lineArgs):
+            if not arg:
+                print("** class name missing **")
                 return
-            newInstance = eval(str(lineArgs[0]) + "()")
-            print(newInstance.id)
-            newInstance.save()
+            try:
+                new_instance = eval(arg)()
+                new_instance.save()
+                print(new_instance.id)
+            except NameError:
+                print("** class doesn't exist **")
 
     def do_show(self, arg):
             """Print the string representation of an instance."""
@@ -127,18 +122,6 @@ class HBNBCommand(cmd.Cmd):
                 else:
                     print("** no instance found **")
 
-    @classmethod
-    def veriverifyClassProjects(cls, args):
-        """
-        Verify that class being created is defined
-        """
-        if len(args) == 0:
-            print("** class name missing **")
-            return False
-        if args[0] not in cls.listProjects:
-            print("** class doesn't exist **")
-            return False
-        return True
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
