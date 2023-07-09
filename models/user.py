@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" Comment """
+"""
+Module User
+"""
 
 
 from models.base_model import BaseModel
