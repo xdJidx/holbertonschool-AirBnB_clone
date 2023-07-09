@@ -58,7 +58,12 @@ class BaseModel:
         Returns dict with all keys/values of __dict__ of the instance
         """
         dict = self.__dict__.copy()
-        dict["created_at"] = dict["created_at"].isoformat()
-        dict["updated_at"] = dict["updated_at"].isoformat()
-        dict["__class__"] = self.__class__.__name__
+        dict.update([("__class__", self.__class__.__name__)])
+        for key, value in dict.items():
+            if key == "created_at":
+                dict.update([(key, value.isoformat())])
+            elif key == "updated_at":
+                dict.update([(key, value.isoformat())])
+            else:
+                dict.updated([(key, value)])
         return dict

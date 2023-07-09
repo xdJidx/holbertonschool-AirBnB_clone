@@ -10,8 +10,8 @@ class Place(BaseModel):
     """
 
     """
-    city = ""
-    user = ""
+    city_id = ""
+    user_id = ""
     name = ""
     description = ""
     number_rooms = 0
