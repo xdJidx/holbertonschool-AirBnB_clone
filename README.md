@@ -8,14 +8,14 @@ The AirBNB Clone project aims to replicate the functionality of the popular acco
 To compile and install the AirBNB Clone project, please follow these steps:
 
 1. Clone the repository from GitHub:
-"""
+'''
 git clone https://github.com/Spark4545/holbertonschool-AirBnB_clone.git
 """
 
 2. Navigate to the project directory:
-"""
+'''
 cd holbertonschool-AirBnB_clone
-"""
+'''
 
 ## Requirements
 The AirBNB Clone project requires the following dependencies:
@@ -27,7 +27,7 @@ Examples
 Here are some examples of how to use the AirBNB Clone project:
 
 1. Creating a BaseModel object from a dictionary:
-"""
+'''
 from models.base_model import BaseModel
 
 data = {
@@ -37,36 +37,36 @@ data = {
 }
 
 obj = BaseModel(**data)
-"""
+'''
 
 2. Storing the first object:
-"""
+'''
 from models import storage
 
 obj.save()  # The object will be saved in the file storage
-"""
+'''
 
 3. Interacting with the console:
-"""
+'''
 python console.py
 (hbnb) help
-"""
+'''
 
 4. Creating a User object:
-"""
+'''
 from models.user import User
 
 user = User()
 user.name = "John Doe"
 user.email = "john.doe@example.com"
 user.save()
-"""
+'''
 
 ## Testing
 To run the tests for the AirBNB Clone project, execute the following command from the project directory:
-"""
+'''
 python -m unittest discover tests
-"""
+'''
 The tests will validate the functionality of different components and classes within the project.
 
 Please note that these instructions assume you have a basic understanding of Python and its development environment. If you encounter any issues, refer to the project's documentation or seek assistance from the project maintainers.
