@@ -15,3 +15,9 @@
 [2-common.css](./styles/2-common.css)<br>
 [2-common.css](./styles/2-header.css)<br>
 [2-common.css](./styles/2-footer.css)<br>
+
+3. Zoning done!
+[3-index.html](./3-index.html)<br>
+[3-common.css](./styles/3-common.css)<br>
+[3-common.css](./styles/3-header.css)<br>
+[3-common.css](./styles/3-footer.css)<br>
