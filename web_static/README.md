@@ -30,3 +30,7 @@
 5. More filters
 [5-index.html](./5-index.html)<br>
 [5-filters.css](./styles/5-common.css)<br>
+
+6. It's (h)over
+[6-index.html](./6-index.html)<br>
+[6-filters.css](./styles/6-common.css)<br>
