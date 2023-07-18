@@ -34,3 +34,7 @@
 6. It's (h)over
 [6-index.html](./6-index.html)<br>
 [6-filters.css](./styles/6-common.css)<br>
+
+7. Display results
+[7-index.html](./7-index.html)<br>
+[7-filters.css](./styles/7-common.css)<br>
