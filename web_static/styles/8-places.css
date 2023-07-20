@@ -1,0 +1,105 @@
+h1 {
+    font-size: 30px;
+    text-align: left;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.places {
+    text-align: center;
+}
+
+.article_container {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.places article {
+    width: 390px;
+    border: 1px solid #FF5A5F;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.name_price_container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    margin-left: 35%;
+    margin-top: 0px;
+}
+
+.price_by_night {
+    color: #FF5A5F;
+    border: 3px solid #FF5A5F;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    padding: 5px;
+}
+
+.information {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    border: 1px black solid;
+    height: 80px;
+}
+
+.max_guests {
+    background-image: url(../images/icon_group.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 100px;
+    height: 60px;
+    justify-content: center;
+    padding: 0px;
+}
+
+.number_rooms {
+    background-image: url(../images/icon_bed.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 100px;
+    height: 60px;
+    justify-content: center;
+    padding: 0px;
+}
+
+.number_bathrooms {
+    background-image: url(../images/icon_bath.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 100px;
+    height: 60px;
+    justify-content: center;
+    padding: 0px;
+}
+
+.user {
+    font-style: bold;
+}
